@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SYDLoginViewController">
+            <connections>
+                <outlet property="loginCons" destination="fc6-7u-BUb" id="ob4-R2-fEq"/>
+                <outlet property="loginView" destination="e7E-ch-gJl" id="ivr-af-fs2"/>
+                <outlet property="quickLoginV" destination="OXH-N4-hct" id="ct0-Xu-vns"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_register_background" translatesAutoresizingMaskIntoConstraints="NO" id="2tR-um-Ig5">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iP9-be-AJN">
+                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLb-14-Rfu">
+                            <rect key="frame" x="0.0" y="1" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="Gww-ZA-9XS"/>
+                            </constraints>
+                            <state key="normal" image="login_close_icon"/>
+                            <connections>
+                                <action selector="backBtn:" destination="-1" eventType="touchUpInside" id="7mx-MG-uD0"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAr-Y7-fhH">
+                            <rect key="frame" x="271" y="0.0" width="88" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="88" id="0Ms-br-tUD"/>
+                                <constraint firstAttribute="height" constant="44" id="NXI-Ki-GTY"/>
+                            </constraints>
+                            <state key="normal" title="注册账号"/>
+                            <state key="selected" title="已有账号？"/>
+                            <state key="highlighted" title="&lt;已有账号"/>
+                            <connections>
+                                <action selector="register:" destination="-1" eventType="touchUpInside" id="dGL-MC-bPz"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="ZAr-Y7-fhH" secondAttribute="trailing" constant="16" id="4bu-xk-0h2"/>
+                        <constraint firstItem="PLb-14-Rfu" firstAttribute="top" secondItem="iP9-be-AJN" secondAttribute="top" constant="1" id="9i7-mH-a9T"/>
+                        <constraint firstAttribute="bottom" secondItem="PLb-14-Rfu" secondAttribute="bottom" constant="-1" id="Gx3-KR-D7e"/>
+                        <constraint firstItem="PLb-14-Rfu" firstAttribute="leading" secondItem="iP9-be-AJN" secondAttribute="leading" id="Sto-Kp-FyS"/>
+                        <constraint firstAttribute="height" constant="44" id="V5B-Pi-aEO"/>
+                        <constraint firstItem="ZAr-Y7-fhH" firstAttribute="top" secondItem="iP9-be-AJN" secondAttribute="top" id="geU-CW-4vm"/>
+                        <constraint firstAttribute="bottom" secondItem="ZAr-Y7-fhH" secondAttribute="bottom" id="psN-TA-pgQ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OXH-N4-hct">
+                    <rect key="frame" x="0.0" y="519" width="375" height="128"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7E-ch-gJl">
+                    <rect key="frame" x="0.0" y="182" width="750" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="E45-fy-CB2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="2tR-um-Ig5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4CF-ZO-Kvz"/>
+                <constraint firstAttribute="trailing" secondItem="iP9-be-AJN" secondAttribute="trailing" id="9vI-7C-Chl"/>
+                <constraint firstAttribute="bottom" secondItem="2tR-um-Ig5" secondAttribute="bottom" id="Aeq-7s-fgc"/>
+                <constraint firstItem="iP9-be-AJN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="CeL-2x-PiI"/>
+                <constraint firstItem="OXH-N4-hct" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="519" id="Etw-6o-xfE"/>
+                <constraint firstAttribute="bottom" secondItem="OXH-N4-hct" secondAttribute="bottom" constant="20" id="F9h-4u-Hdm"/>
+                <constraint firstItem="e7E-ch-gJl" firstAttribute="top" secondItem="iP9-be-AJN" secondAttribute="bottom" constant="118" id="Gy0-vD-aLM"/>
+                <constraint firstAttribute="trailing" secondItem="OXH-N4-hct" secondAttribute="trailing" id="Kcp-3W-EZN"/>
+                <constraint firstItem="OXH-N4-hct" firstAttribute="top" secondItem="e7E-ch-gJl" secondAttribute="bottom" constant="37" id="LuS-h2-HmF"/>
+                <constraint firstItem="iP9-be-AJN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="S0o-PW-z2Q"/>
+                <constraint firstItem="e7E-ch-gJl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fc6-7u-BUb"/>
+                <constraint firstItem="iP9-be-AJN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="g9I-eV-6mM"/>
+                <constraint firstItem="OXH-N4-hct" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gAj-hK-5Pa"/>
+                <constraint firstItem="e7E-ch-gJl" firstAttribute="width" secondItem="2tR-um-Ig5" secondAttribute="width" multiplier="2" id="gIP-Sy-QAh"/>
+                <constraint firstItem="iP9-be-AJN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="l2k-Gq-bSN"/>
+                <constraint firstAttribute="trailing" secondItem="iP9-be-AJN" secondAttribute="trailing" id="mWI-DF-Qd7"/>
+                <constraint firstItem="2tR-um-Ig5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pXc-JQ-Mk7"/>
+                <constraint firstAttribute="trailing" secondItem="2tR-um-Ig5" secondAttribute="trailing" id="uvY-mV-BBd"/>
+            </constraints>
+            <point key="canvasLocation" x="33" y="54"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="login_close_icon" width="16" height="16"/>
+        <image name="login_register_background" width="320" height="568"/>
+    </resources>
+</document>

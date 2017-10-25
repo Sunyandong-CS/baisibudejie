@@ -20,6 +20,6 @@
 @property CGFloat right;
 @property CGFloat top;
 @property CGFloat bottom;
-+ (instancetype)viewFromXIB;
++ (instancetype)viewFromXib;
 - (BOOL)isShowingOnKeyWindow;
 @end

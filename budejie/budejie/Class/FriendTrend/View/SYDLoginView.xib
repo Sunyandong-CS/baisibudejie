@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,6 +46,7 @@
                         <constraint firstItem="meX-b3-PIZ" firstAttribute="height" secondItem="dv0-zh-HVM" secondAttribute="height" id="BlC-Ud-bfC"/>
                         <constraint firstItem="meX-b3-PIZ" firstAttribute="bottom" secondItem="oXS-SR-XPo" secondAttribute="bottom" id="DEn-Kh-71a"/>
                         <constraint firstAttribute="trailing" secondItem="dv0-zh-HVM" secondAttribute="trailing" constant="10" id="HUi-ZE-XPK"/>
+                        <constraint firstAttribute="trailing" secondItem="oXS-SR-XPo" secondAttribute="trailing" id="IRw-Vu-Q3V"/>
                         <constraint firstItem="oXS-SR-XPo" firstAttribute="top" secondItem="Sor-vP-n4W" secondAttribute="top" id="N7t-1x-RLO"/>
                         <constraint firstItem="dv0-zh-HVM" firstAttribute="leading" secondItem="Sor-vP-n4W" secondAttribute="leading" constant="10" id="Ubl-gB-Ud9"/>
                         <constraint firstItem="meX-b3-PIZ" firstAttribute="width" secondItem="dv0-zh-HVM" secondAttribute="width" id="X9X-uM-eR6"/>
@@ -124,9 +125,13 @@
                         <constraint firstAttribute="trailing" secondItem="LRd-uQ-1Iw" secondAttribute="trailing" constant="10" id="PWf-WJ-g2o"/>
                         <constraint firstItem="8OE-kR-4Ye" firstAttribute="leading" secondItem="LRd-uQ-1Iw" secondAttribute="leading" id="Pw0-df-XOj"/>
                         <constraint firstItem="gy9-8s-Sh1" firstAttribute="leading" secondItem="ZYL-Yn-lZ9" secondAttribute="leading" id="QNF-Mb-kc9"/>
+                        <constraint firstItem="gy9-8s-Sh1" firstAttribute="top" secondItem="ZYL-Yn-lZ9" secondAttribute="top" id="Y1M-Ys-SKM"/>
                         <constraint firstItem="8OE-kR-4Ye" firstAttribute="height" secondItem="LRd-uQ-1Iw" secondAttribute="height" id="YCx-tq-HaO"/>
                         <constraint firstItem="8OE-kR-4Ye" firstAttribute="bottom" secondItem="gy9-8s-Sh1" secondAttribute="bottom" id="ZnL-BL-K0h"/>
+                        <constraint firstItem="gy9-8s-Sh1" firstAttribute="leading" secondItem="ZYL-Yn-lZ9" secondAttribute="leading" id="dpb-dl-sh1"/>
+                        <constraint firstAttribute="bottom" secondItem="gy9-8s-Sh1" secondAttribute="bottom" id="rrd-3r-0Ch"/>
                         <constraint firstItem="gy9-8s-Sh1" firstAttribute="centerY" secondItem="ZYL-Yn-lZ9" secondAttribute="centerY" id="vEP-FR-cPT"/>
+                        <constraint firstAttribute="trailing" secondItem="gy9-8s-Sh1" secondAttribute="trailing" id="yro-8J-vaZ"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aW-Zx-PD2">

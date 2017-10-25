@@ -11,6 +11,9 @@
 #import "UIView+frame.h"
 #import "UIImage+SYDImage.h"
 #import <UIImageView+WebCache.h>
+#import "SYDTopicVideoView.h"
+#import "SYDTopicVoiceView.h"
+#import "SYDTopicPictureView.h"
 
 @interface SYDTopicCell ()
 // 控件命名--> 功能加控件类型
@@ -22,15 +25,48 @@
 @property (weak, nonatomic) IBOutlet UIButton *caiButton;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
+@property (weak, nonatomic) IBOutlet UILabel *commentContent;
+@property (weak, nonatomic) IBOutlet UILabel *commentTitle;
+@property (weak, nonatomic) IBOutlet UIView *commentView;
+/* 记录cell中间部分的View，防止重复加载 */
+@property (nonatomic, strong) SYDTopicVoiceView *voiceView;
+@property (nonatomic, strong) SYDTopicVideoView *videoView;
+@property (nonatomic, strong) SYDTopicPictureView *pictureView;
 
 @end
 
-
 @implementation SYDTopicCell
+
+#pragma mark -------
+#pragma mark 懒加载cell的中间部分的View
+- (SYDTopicVoiceView *)voiceView {
+    if (_voiceView == nil) {
+        _voiceView = [SYDTopicVoiceView viewFromXib];
+        [self.contentView addSubview:_voiceView];
+    }
+    return _voiceView;
+}
+
+- (SYDTopicVideoView *)videoView {
+    if (_videoView == nil) {
+        _videoView = [SYDTopicVideoView viewFromXib];
+        [self.contentView addSubview:_videoView];
+    }
+    return _videoView;
+}
+- (SYDTopicPictureView *)pictureView {
+    if (_pictureView == nil) {
+        _pictureView = [SYDTopicPictureView viewFromXib];
+        [self.contentView addSubview:_pictureView];
+    }
+    return _pictureView;
+}
+
+
+
 
 - (void)setFrame:(CGRect)frame {
     frame.size.height -= 10;
-    
     [super setFrame:frame];
 }
 
@@ -38,7 +74,6 @@
     [super awakeFromNib];
     
     self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
-    
 }
 
 - (void)setTopic:(SYDTopicModel *)topic {
@@ -55,10 +90,50 @@
         self.profileImageView.image = [image syd_circleImage];
     }];
     
-//    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image]];
+    //    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image]];
     self.nameLabel.text = topic.name;
     self.passTimeLabel.text = topic.passtime;
     self.textContentLabel.text = topic.text;
+    
+    // 设置声音视频等内容
+    if(topic.type == SYDTopicTypeVideo) {
+        // 添加中部视频控件，并设置内容和frame
+        self.videoView.hidden = NO;
+        self.voiceView.hidden = YES;
+        self.pictureView.hidden = YES;
+        self.videoView.topic = topic;
+        self.videoView.frame = self.topic.middleFrame;
+        
+    }else if(topic.type == SYDTopicTypePicture) {
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.pictureView.hidden = NO;
+        self.pictureView.topic = topic;
+        self.pictureView.frame = self.topic.middleFrame;
+
+    }else if (topic.type == SYDTopicTypeVoice) {
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = NO;
+        self.pictureView.hidden = YES;
+        self.voiceView.topic = topic; 
+        self.voiceView.frame = self.topic.middleFrame;
+
+        
+    }else if (topic.type == SYDTopicTypeJoke) {
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.pictureView.hidden = YES;
+    }
+    
+    //设置最热评论部分内容
+    if (topic.top_cmt.count > 0) {// 最热评论部分有内容
+        self.commentView.hidden = NO;
+        NSDictionary *cmtDict = topic.top_cmt.firstObject;
+        self.commentContent.text = [NSString stringWithFormat:@"%@ : %@",cmtDict[@"user"][@"username"],cmtDict[@"content"]];
+        
+    } else {// 无内容
+        self.commentView.hidden = YES;
+    }
     
     // 设置底部按钮内容
     [self setButtonTitle:self.dingButton number:topic.ding placeholder:@"顶"];
@@ -67,7 +142,6 @@
     [self setButtonTitle:self.commentButton number:topic.comment placeholder:@"评论"];
     
 }
-
 
 /**
  设置底部按钮内容
@@ -88,8 +162,6 @@
     }else {
         [titleBtn setTitle:placeholder forState:UIControlStateNormal];
     }
-    
-    
 }
 
 

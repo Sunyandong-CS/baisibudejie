@@ -43,7 +43,6 @@
 		1FBC102D1F6CE72C0010FD5D /* SYDLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FBC102B1F6CE72C0010FD5D /* SYDLoginViewController.xib */; };
 		1FBC10301F6D21BC0010FD5D /* SYDLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC102F1F6D21BC0010FD5D /* SYDLoginView.m */; };
 		1FBC10321F6D21D10010FD5D /* SYDLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FBC10311F6D21D10010FD5D /* SYDLoginView.xib */; };
-		1FBC10361F6FA5C50010FD5D /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC10351F6FA5C50010FD5D /* UIView+frame.m */; };
 		1FBC10391F6FAF3A0010FD5D /* SYDQuickLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC10381F6FAF3A0010FD5D /* SYDQuickLoginView.m */; };
 		1FBC103B1F6FAF6A0010FD5D /* SYDQuickLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FBC103A1F6FAF6A0010FD5D /* SYDQuickLoginView.xib */; };
 		1FBC103E1F6FC1E50010FD5D /* SYDButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC103D1F6FC1E40010FD5D /* SYDButton.m */; };
@@ -60,13 +59,16 @@
 		1FC98C451F696C6000471D5C /* SYDSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FC98C431F696C6000471D5C /* SYDSubCell.xib */; };
 		1FFE4BED1F61415600B94753 /* SYDAdvertisementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE4BEB1F61415600B94753 /* SYDAdvertisementViewController.m */; };
 		1FFE4BEE1F61415600B94753 /* SYDAdvertisementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FFE4BEC1F61415600B94753 /* SYDAdvertisementViewController.xib */; };
-		1FFE4BF71F61449200B94753 /* LaunchImage-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FFE4BF01F61449200B94753 /* LaunchImage-568h@2x.png */; };
-		1FFE4BF81F61449200B94753 /* LaunchImage-700-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FFE4BF11F61449200B94753 /* LaunchImage-700-568h@2x.png */; };
-		1FFE4BF91F61449200B94753 /* LaunchImage-700@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FFE4BF21F61449200B94753 /* LaunchImage-700@2x.png */; };
-		1FFE4BFA1F61449200B94753 /* LaunchImage-800-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FFE4BF31F61449200B94753 /* LaunchImage-800-667h@2x.png */; };
-		1FFE4BFB1F61449200B94753 /* LaunchImage-800-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FFE4BF41F61449200B94753 /* LaunchImage-800-Portrait-736h@3x.png */; };
-		1FFE4BFC1F61449200B94753 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FFE4BF51F61449200B94753 /* LaunchImage.png */; };
-		1FFE4BFD1F61449200B94753 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FFE4BF61F61449200B94753 /* LaunchImage@2x.png */; };
+		CFB3AFFC1F94E75F00298E2A /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB3AFFB1F94E75F00298E2A /* UIView+frame.m */; };
+		CFD1A81C1F96ED5B001D6F11 /* SYDTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD1A81B1F96ED5B001D6F11 /* SYDTopicVideoView.m */; };
+		CFD1A81E1F96ED6A001D6F11 /* SYDTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD1A81D1F96ED6A001D6F11 /* SYDTopicVideoView.xib */; };
+		CFD1A8211F97285F001D6F11 /* SYDTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD1A8201F97285F001D6F11 /* SYDTopicVoiceView.m */; };
+		CFD1A8231F97286D001D6F11 /* SYDTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD1A8221F97286D001D6F11 /* SYDTopicVoiceView.xib */; };
+		CFD1A8261F973111001D6F11 /* SYDTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD1A8251F973111001D6F11 /* SYDTopicPictureView.m */; };
+		CFD1A8281F973120001D6F11 /* SYDTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD1A8271F973120001D6F11 /* SYDTopicPictureView.xib */; };
+		CFD1A82B1F98D771001D6F11 /* UIImageView+SYDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD1A82A1F98D771001D6F11 /* UIImageView+SYDImageCache.m */; };
+		CFD1A8341F9B37E7001D6F11 /* SYDShowBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD1A8321F9B37E7001D6F11 /* SYDShowBigPictureViewController.m */; };
+		CFD1A8351F9B37E7001D6F11 /* SYDShowBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD1A8331F9B37E7001D6F11 /* SYDShowBigPictureViewController.xib */; };
 		F13759B59196C34A6D6B1A6F /* libPods-budejie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6A28540AEE5ABBD3AEED56 /* libPods-budejie.a */; };
 /* End PBXBuildFile section */
 
@@ -156,8 +158,6 @@
 		1FBC102E1F6D21BC0010FD5D /* SYDLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYDLoginView.h; sourceTree = "<group>"; };
 		1FBC102F1F6D21BC0010FD5D /* SYDLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYDLoginView.m; sourceTree = "<group>"; };
 		1FBC10311F6D21D10010FD5D /* SYDLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYDLoginView.xib; sourceTree = "<group>"; };
-		1FBC10341F6FA5C50010FD5D /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+frame.h"; path = "../../../../baisibudejie/baisibudejie/baisibudejie/Classes/Other/Category/UIView+frame.h"; sourceTree = "<group>"; };
-		1FBC10351F6FA5C50010FD5D /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+frame.m"; path = "../../../../baisibudejie/baisibudejie/baisibudejie/Classes/Other/Category/UIView+frame.m"; sourceTree = "<group>"; };
 		1FBC10371F6FAF3A0010FD5D /* SYDQuickLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYDQuickLoginView.h; sourceTree = "<group>"; };
 		1FBC10381F6FAF3A0010FD5D /* SYDQuickLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYDQuickLoginView.m; sourceTree = "<group>"; };
 		1FBC103A1F6FAF6A0010FD5D /* SYDQuickLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYDQuickLoginView.xib; sourceTree = "<group>"; };
@@ -185,15 +185,31 @@
 		1FFE4BEA1F61415600B94753 /* SYDAdvertisementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYDAdvertisementViewController.h; sourceTree = "<group>"; };
 		1FFE4BEB1F61415600B94753 /* SYDAdvertisementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYDAdvertisementViewController.m; sourceTree = "<group>"; };
 		1FFE4BEC1F61415600B94753 /* SYDAdvertisementViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYDAdvertisementViewController.xib; sourceTree = "<group>"; };
-		1FFE4BF01F61449200B94753 /* LaunchImage-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-568h@2x.png"; sourceTree = "<group>"; };
-		1FFE4BF11F61449200B94753 /* LaunchImage-700-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700-568h@2x.png"; sourceTree = "<group>"; };
-		1FFE4BF21F61449200B94753 /* LaunchImage-700@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700@2x.png"; sourceTree = "<group>"; };
-		1FFE4BF31F61449200B94753 /* LaunchImage-800-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-667h@2x.png"; sourceTree = "<group>"; };
-		1FFE4BF41F61449200B94753 /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
-		1FFE4BF51F61449200B94753 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
-		1FFE4BF61F61449200B94753 /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
 		3E6A28540AEE5ABBD3AEED56 /* libPods-budejie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-budejie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A38268A64DF1882ED4C45197 /* Pods-budejie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-budejie.release.xcconfig"; path = "Pods/Target Support Files/Pods-budejie/Pods-budejie.release.xcconfig"; sourceTree = "<group>"; };
+		CF3E13651F94E91A00D2E983 /* LaunchImage-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-568h@2x.png"; sourceTree = "<group>"; };
+		CF3E13661F94E91A00D2E983 /* LaunchImage-700-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700-568h@2x.png"; sourceTree = "<group>"; };
+		CF3E13671F94E91A00D2E983 /* LaunchImage-700@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700@2x.png"; sourceTree = "<group>"; };
+		CF3E13681F94E91A00D2E983 /* LaunchImage-800-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-667h@2x.png"; sourceTree = "<group>"; };
+		CF3E13691F94E91A00D2E983 /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
+		CF3E136A1F94E91A00D2E983 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
+		CF3E136B1F94E91A00D2E983 /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
+		CFB3AFFA1F94E75100298E2A /* UIView+frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
+		CFB3AFFB1F94E75F00298E2A /* UIView+frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
+		CFD1A81A1F96ED5B001D6F11 /* SYDTopicVideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYDTopicVideoView.h; sourceTree = "<group>"; };
+		CFD1A81B1F96ED5B001D6F11 /* SYDTopicVideoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYDTopicVideoView.m; sourceTree = "<group>"; };
+		CFD1A81D1F96ED6A001D6F11 /* SYDTopicVideoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SYDTopicVideoView.xib; sourceTree = "<group>"; };
+		CFD1A81F1F97285F001D6F11 /* SYDTopicVoiceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYDTopicVoiceView.h; sourceTree = "<group>"; };
+		CFD1A8201F97285F001D6F11 /* SYDTopicVoiceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYDTopicVoiceView.m; sourceTree = "<group>"; };
+		CFD1A8221F97286D001D6F11 /* SYDTopicVoiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SYDTopicVoiceView.xib; sourceTree = "<group>"; };
+		CFD1A8241F973111001D6F11 /* SYDTopicPictureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYDTopicPictureView.h; sourceTree = "<group>"; };
+		CFD1A8251F973111001D6F11 /* SYDTopicPictureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYDTopicPictureView.m; sourceTree = "<group>"; };
+		CFD1A8271F973120001D6F11 /* SYDTopicPictureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SYDTopicPictureView.xib; sourceTree = "<group>"; };
+		CFD1A8291F98D771001D6F11 /* UIImageView+SYDImageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SYDImageCache.h"; sourceTree = "<group>"; };
+		CFD1A82A1F98D771001D6F11 /* UIImageView+SYDImageCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SYDImageCache.m"; sourceTree = "<group>"; };
+		CFD1A8311F9B37E7001D6F11 /* SYDShowBigPictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYDShowBigPictureViewController.h; sourceTree = "<group>"; };
+		CFD1A8321F9B37E7001D6F11 /* SYDShowBigPictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYDShowBigPictureViewController.m; sourceTree = "<group>"; };
+		CFD1A8331F9B37E7001D6F11 /* SYDShowBigPictureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SYDShowBigPictureViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +280,9 @@
 				1F4DF96F1F7A014400D1F469 /* SYDVideoViewController.m */,
 				1F4DF9711F7A016600D1F469 /* SYDPictureViewController.h */,
 				1F4DF9721F7A016600D1F469 /* SYDPictureViewController.m */,
+				CFD1A8311F9B37E7001D6F11 /* SYDShowBigPictureViewController.h */,
+				CFD1A8321F9B37E7001D6F11 /* SYDShowBigPictureViewController.m */,
+				CFD1A8331F9B37E7001D6F11 /* SYDShowBigPictureViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -285,6 +304,15 @@
 				1FA5BFD11F8E49D300C6AD10 /* SYDTopicCell.h */,
 				1FA5BFD21F8E49D300C6AD10 /* SYDTopicCell.m */,
 				1FA5BFE01F8F4A4900C6AD10 /* SYDTopicCell.xib */,
+				CFD1A81A1F96ED5B001D6F11 /* SYDTopicVideoView.h */,
+				CFD1A81B1F96ED5B001D6F11 /* SYDTopicVideoView.m */,
+				CFD1A81D1F96ED6A001D6F11 /* SYDTopicVideoView.xib */,
+				CFD1A81F1F97285F001D6F11 /* SYDTopicVoiceView.h */,
+				CFD1A8201F97285F001D6F11 /* SYDTopicVoiceView.m */,
+				CFD1A8221F97286D001D6F11 /* SYDTopicVoiceView.xib */,
+				CFD1A8241F973111001D6F11 /* SYDTopicPictureView.h */,
+				CFD1A8251F973111001D6F11 /* SYDTopicPictureView.m */,
+				CFD1A8271F973120001D6F11 /* SYDTopicPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -503,14 +531,16 @@
 		1F02DCC11F5D4ED200A3EC74 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				1FBC10341F6FA5C50010FD5D /* UIView+frame.h */,
-				1FBC10351F6FA5C50010FD5D /* UIView+frame.m */,
+				CFB3AFFB1F94E75F00298E2A /* UIView+frame.m */,
+				CFB3AFFA1F94E75100298E2A /* UIView+frame.h */,
 				1F02DCC21F5D4F1400A3EC74 /* UIImage+SYDImage.h */,
 				1F02DCC31F5D4F1400A3EC74 /* UIImage+SYDImage.m */,
 				1F66A02C1F5EDBFC00B2082C /* UIBarButtonItem+item.h */,
 				1F66A02D1F5EDBFC00B2082C /* UIBarButtonItem+item.m */,
 				1FBC10451F70AE370010FD5D /* UITextField+placeholderColor.h */,
 				1FBC10461F70AE370010FD5D /* UITextField+placeholderColor.m */,
+				CFD1A8291F98D771001D6F11 /* UIImageView+SYDImageCache.h */,
+				CFD1A82A1F98D771001D6F11 /* UIImageView+SYDImageCache.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -562,7 +592,7 @@
 		1F3CE1421F5C0EA300CB0FA8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1FFE4BEF1F61449200B94753 /* 启动图片 */,
+				CF3E13641F94E91A00D2E983 /* 启动图片 */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -663,27 +693,26 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1FFE4BEF1F61449200B94753 /* 启动图片 */ = {
-			isa = PBXGroup;
-			children = (
-				1FFE4BF01F61449200B94753 /* LaunchImage-568h@2x.png */,
-				1FFE4BF11F61449200B94753 /* LaunchImage-700-568h@2x.png */,
-				1FFE4BF21F61449200B94753 /* LaunchImage-700@2x.png */,
-				1FFE4BF31F61449200B94753 /* LaunchImage-800-667h@2x.png */,
-				1FFE4BF41F61449200B94753 /* LaunchImage-800-Portrait-736h@3x.png */,
-				1FFE4BF51F61449200B94753 /* LaunchImage.png */,
-				1FFE4BF61F61449200B94753 /* LaunchImage@2x.png */,
-			);
-			name = "启动图片";
-			path = "../../../归档/代码/02-BuDeJie-/BuDeJie/启动图片";
-			sourceTree = "<group>";
-		};
 		796624F789136C090816A107 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				3E6A28540AEE5ABBD3AEED56 /* libPods-budejie.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF3E13641F94E91A00D2E983 /* 启动图片 */ = {
+			isa = PBXGroup;
+			children = (
+				CF3E13651F94E91A00D2E983 /* LaunchImage-568h@2x.png */,
+				CF3E13661F94E91A00D2E983 /* LaunchImage-700-568h@2x.png */,
+				CF3E13671F94E91A00D2E983 /* LaunchImage-700@2x.png */,
+				CF3E13681F94E91A00D2E983 /* LaunchImage-800-667h@2x.png */,
+				CF3E13691F94E91A00D2E983 /* LaunchImage-800-Portrait-736h@3x.png */,
+				CF3E136A1F94E91A00D2E983 /* LaunchImage.png */,
+				CF3E136B1F94E91A00D2E983 /* LaunchImage@2x.png */,
+			);
+			path = "启动图片";
 			sourceTree = "<group>";
 		};
 		F7B1E786A51448D00BCAAB04 /* Pods */ = {
@@ -761,12 +790,12 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SYD;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = com.xididan;
 				TargetAttributes = {
 					1F3CE13E1F5C0EA300CB0FA8 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = VZZDLGJH3M;
+						DevelopmentTeam = BBKVX2RMVD;
 						ProvisioningStyle = Automatic;
 					};
 					1F3CE1571F5C0EA400CB0FA8 = {
@@ -808,23 +837,20 @@
 			files = (
 				1F3CE1521F5C0EA300CB0FA8 /* LaunchScreen.storyboard in Resources */,
 				1FC98C451F696C6000471D5C /* SYDSubCell.xib in Resources */,
-				1FFE4BFB1F61449200B94753 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				1FFE4BEE1F61415600B94753 /* SYDAdvertisementViewController.xib in Resources */,
 				1FA5BFE11F8F4A4900C6AD10 /* SYDTopicCell.xib in Resources */,
 				1F12F1F11F724AF70096DAB4 /* SYDWebViewController.xib in Resources */,
-				1FFE4BFD1F61449200B94753 /* LaunchImage@2x.png in Resources */,
 				1FBC104E1F7105580010FD5D /* SYDSquareCell.xib in Resources */,
-				1FFE4BF81F61449200B94753 /* LaunchImage-700-568h@2x.png in Resources */,
-				1FFE4BFA1F61449200B94753 /* LaunchImage-800-667h@2x.png in Resources */,
 				1FBC103B1F6FAF6A0010FD5D /* SYDQuickLoginView.xib in Resources */,
 				1FBC102D1F6CE72C0010FD5D /* SYDLoginViewController.xib in Resources */,
-				1FFE4BF71F61449200B94753 /* LaunchImage-568h@2x.png in Resources */,
-				1FFE4BFC1F61449200B94753 /* LaunchImage.png in Resources */,
 				1FBC10321F6D21D10010FD5D /* SYDLoginView.xib in Resources */,
 				1F3CE14F1F5C0EA300CB0FA8 /* Assets.xcassets in Resources */,
+				CFD1A8231F97286D001D6F11 /* SYDTopicVoiceView.xib in Resources */,
 				1F5B34501F6AAE790055CDDB /* SYDFriendTrendViewController.xib in Resources */,
-				1FFE4BF91F61449200B94753 /* LaunchImage-700@2x.png in Resources */,
+				CFD1A81E1F96ED6A001D6F11 /* SYDTopicVideoView.xib in Resources */,
 				1F3CE14D1F5C0EA300CB0FA8 /* Main.storyboard in Resources */,
+				CFD1A8281F973120001D6F11 /* SYDTopicPictureView.xib in Resources */,
+				CFD1A8351F9B37E7001D6F11 /* SYDShowBigPictureViewController.xib in Resources */,
 				1FBC10491F70EFED0010FD5D /* SYDMeViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -867,13 +893,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-budejie-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8E59E1344304D8B2A1C290C3 /* [CP] Copy Pods Resources */ = {
@@ -882,9 +911,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-budejie/Pods-budejie-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -905,9 +937,11 @@
 				1FC98C401F695EE800471D5C /* SYDSubItem.m in Sources */,
 				1FBC102C1F6CE72C0010FD5D /* SYDLoginViewController.m in Sources */,
 				1F4DF9731F7A016600D1F469 /* SYDPictureViewController.m in Sources */,
+				CFD1A8261F973111001D6F11 /* SYDTopicPictureView.m in Sources */,
 				1F12F1FC1F74CF240096DAB4 /* FileCacheTool.m in Sources */,
 				1F02DCB31F5D408B00A3EC74 /* SYDNewViewController.m in Sources */,
 				1FBC10511F7115250010FD5D /* SYDSquareItemModel.m in Sources */,
+				CFB3AFFC1F94E75F00298E2A /* UIView+frame.m in Sources */,
 				1F4DF96A1F7A010600D1F469 /* SYDAllViewController.m in Sources */,
 				1FBC104D1F7105580010FD5D /* SYDSquareCell.m in Sources */,
 				1F4DF96D1F7A012A00D1F469 /* SYDSoundViewController.m in Sources */,
@@ -918,6 +952,7 @@
 				1FBC10301F6D21BC0010FD5D /* SYDLoginView.m in Sources */,
 				1F12F1F01F724AF70096DAB4 /* SYDWebViewController.m in Sources */,
 				1F02DCB61F5D40A800A3EC74 /* SYDPublishViewController.m in Sources */,
+				CFD1A82B1F98D771001D6F11 /* UIImageView+SYDImageCache.m in Sources */,
 				1F4DF97A1F7BBD5000D1F469 /* SYDConst.m in Sources */,
 				1F66A02B1F5E9A7F00B2082C /* SYDTabBar.m in Sources */,
 				1FBC10471F70AE370010FD5D /* UITextField+placeholderColor.m in Sources */,
@@ -927,13 +962,15 @@
 				1F02DCC41F5D4F1400A3EC74 /* UIImage+SYDImage.m in Sources */,
 				1F66A02E1F5EDBFC00B2082C /* UIBarButtonItem+item.m in Sources */,
 				1F02DCA71F5D3F1D00A3EC74 /* main.m in Sources */,
+				CFD1A8211F97285F001D6F11 /* SYDTopicVoiceView.m in Sources */,
 				1F02DCA61F5D3F1D00A3EC74 /* AppDelegate.m in Sources */,
 				1FBC10391F6FAF3A0010FD5D /* SYDQuickLoginView.m in Sources */,
+				CFD1A81C1F96ED5B001D6F11 /* SYDTopicVideoView.m in Sources */,
 				1F02DCAA1F5D402100A3EC74 /* SYDEssenceViewController.m in Sources */,
 				1F4DF9701F7A014400D1F469 /* SYDVideoViewController.m in Sources */,
-				1FBC10361F6FA5C50010FD5D /* UIView+frame.m in Sources */,
 				1FA5BFD31F8E49D300C6AD10 /* SYDTopicCell.m in Sources */,
 				1FC652641F78F483000CE48D /* SYDTitleButton.m in Sources */,
+				CFD1A8341F9B37E7001D6F11 /* SYDShowBigPictureViewController.m in Sources */,
 				1F02DCC01F5D413300A3EC74 /* SYDTabViewController.m in Sources */,
 				1F66A03B1F5FC9E200B2082C /* SYDSettingViewController.m in Sources */,
 			);
@@ -1000,7 +1037,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1008,7 +1047,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1048,7 +1091,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1056,7 +1101,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1085,11 +1134,11 @@
 			baseConfigurationReference = 03E71EBF124A903F84EE02BD /* Pods-budejie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VZZDLGJH3M;
+				DEVELOPMENT_TEAM = BBKVX2RMVD;
 				INFOPLIST_FILE = budejie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xidian.budejie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xdedu.budejie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1100,11 +1149,11 @@
 			baseConfigurationReference = A38268A64DF1882ED4C45197 /* Pods-budejie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VZZDLGJH3M;
+				DEVELOPMENT_TEAM = BBKVX2RMVD;
 				INFOPLIST_FILE = budejie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xidian.budejie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xdedu.budejie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -10,6 +10,11 @@
 
 @implementation SYDQuickLoginView
 
+- (void)awakeFromNib {
+    
+    self.autoresizingMask = NO;
+    [super awakeFromNib];
+}
 + (instancetype)loadView {
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
 }

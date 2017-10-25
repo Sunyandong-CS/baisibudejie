@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,7 +36,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afK-qm-OCg">
-                        <rect key="frame" x="60" y="29" width="37.5" height="20"/>
+                        <rect key="frame" x="60" y="29" width="38" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="otJ-2l-H8I"/>
                         </constraints>
@@ -54,7 +54,7 @@
                         <rect key="frame" x="333" y="18" width="24" height="22"/>
                         <state key="normal" image="cellmorebtnnormal"/>
                     </button>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPh-7l-Hkd">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPh-7l-Hkd" userLabel="bottomView">
                         <rect key="frame" x="0.0" y="365" width="375" height="35"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-content-line" translatesAutoresizingMaskIntoConstraints="NO" id="r0D-l9-MvE">
@@ -148,13 +148,44 @@
                             <constraint firstItem="TB4-qj-8zP" firstAttribute="leading" secondItem="xSU-xB-GoC" secondAttribute="trailing" constant="1" id="xgA-IO-Jhb"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMH-OB-f7M">
+                        <rect key="frame" x="18" y="290" width="339" height="75"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最热评论" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlw-zD-2b3" userLabel="cmtTitle">
+                                <rect key="frame" x="0.0" y="0.0" width="69.5" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1P-X7-oU1" userLabel="cmtContent">
+                                <rect key="frame" x="0.0" y="21" width="339" height="54"/>
+                                <color key="backgroundColor" red="1" green="0.403443783" blue="0.4683183253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x1P-X7-oU1" firstAttribute="leading" secondItem="xMH-OB-f7M" secondAttribute="leading" id="35z-8P-nfd"/>
+                            <constraint firstItem="Tlw-zD-2b3" firstAttribute="top" secondItem="xMH-OB-f7M" secondAttribute="top" id="BVk-he-GPe"/>
+                            <constraint firstItem="x1P-X7-oU1" firstAttribute="top" secondItem="Tlw-zD-2b3" secondAttribute="bottom" id="VwE-lh-spR"/>
+                            <constraint firstAttribute="trailing" secondItem="x1P-X7-oU1" secondAttribute="trailing" id="Vzn-cR-N2v"/>
+                            <constraint firstItem="Tlw-zD-2b3" firstAttribute="leading" secondItem="xMH-OB-f7M" secondAttribute="leading" id="qYc-9s-cQv"/>
+                            <constraint firstAttribute="bottom" secondItem="x1P-X7-oU1" secondAttribute="bottom" id="z5U-sP-9Vl"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="cPh-7l-Hkd" firstAttribute="leading" secondItem="LwV-yt-FZR" secondAttribute="leading" id="0NN-OZ-k7j"/>
                     <constraint firstItem="afK-qm-OCg" firstAttribute="top" secondItem="8Yg-Za-w7S" secondAttribute="bottom" constant="1" id="0W8-eh-G7k"/>
                     <constraint firstAttribute="trailing" secondItem="cPh-7l-Hkd" secondAttribute="trailing" id="4My-U1-cW6"/>
                     <constraint firstAttribute="trailingMargin" secondItem="6oK-v6-VIx" secondAttribute="trailing" constant="10" id="AaK-J6-03f"/>
+                    <constraint firstItem="xMH-OB-f7M" firstAttribute="trailing" secondItem="geu-jo-l0T" secondAttribute="trailing" id="B3h-eL-h9U"/>
                     <constraint firstItem="8Yg-Za-w7S" firstAttribute="leading" secondItem="SEL-eo-hEI" secondAttribute="trailing" constant="10" id="Geo-0O-bEV"/>
+                    <constraint firstItem="cPh-7l-Hkd" firstAttribute="top" secondItem="xMH-OB-f7M" secondAttribute="bottom" id="Mrd-BR-doi"/>
+                    <constraint firstItem="xMH-OB-f7M" firstAttribute="leading" secondItem="geu-jo-l0T" secondAttribute="leading" id="NHg-gg-2bV"/>
                     <constraint firstItem="8Yg-Za-w7S" firstAttribute="top" secondItem="LwV-yt-FZR" secondAttribute="topMargin" id="PkP-xD-KqX"/>
                     <constraint firstItem="afK-qm-OCg" firstAttribute="leading" secondItem="SEL-eo-hEI" secondAttribute="trailing" constant="10" id="T3X-2c-20r"/>
                     <constraint firstItem="6oK-v6-VIx" firstAttribute="top" secondItem="LwV-yt-FZR" secondAttribute="topMargin" constant="10" id="ZKe-xe-29L"/>
@@ -169,6 +200,9 @@
             <connections>
                 <outlet property="caiButton" destination="nUW-x9-jXw" id="9PM-Oi-Sye"/>
                 <outlet property="commentButton" destination="TB4-qj-8zP" id="WT0-mZ-ndz"/>
+                <outlet property="commentContent" destination="x1P-X7-oU1" id="qZa-8m-Sh9"/>
+                <outlet property="commentTitle" destination="Tlw-zD-2b3" id="y3I-48-hkW"/>
+                <outlet property="commentView" destination="xMH-OB-f7M" id="e0M-Qr-HGa"/>
                 <outlet property="dingButton" destination="FSb-5c-p9J" id="aib-d8-TzC"/>
                 <outlet property="nameLabel" destination="8Yg-Za-w7S" id="D68-nj-vYV"/>
                 <outlet property="passTimeLabel" destination="afK-qm-OCg" id="Im0-33-7k8"/>
@@ -176,7 +210,7 @@
                 <outlet property="shareButton" destination="xSU-xB-GoC" id="XqT-7X-u7L"/>
                 <outlet property="textContentLabel" destination="geu-jo-l0T" id="MmY-ez-cIw"/>
             </connections>
-            <point key="canvasLocation" x="-22.5" y="158"/>
+            <point key="canvasLocation" x="-180.5" y="-7"/>
         </tableViewCell>
     </objects>
     <resources>

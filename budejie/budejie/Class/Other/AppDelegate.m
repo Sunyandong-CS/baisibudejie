@@ -10,7 +10,7 @@
 //#import "SYDTabViewController.h"
 
 #import "SYDAdvertisementViewController.h"
-
+#import <AFNetworkReachabilityManager.h>
 
 @interface AppDelegate ()
 
@@ -33,6 +33,9 @@
     // 3.显示窗口
     [self.window makeKeyAndVisible];
     
+    // 检测网络状况
+    AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
+    [mgr startMonitoring];
     
     return YES;
 }

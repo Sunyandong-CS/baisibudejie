@@ -10,10 +10,9 @@
 
 @implementation UIView (frame)
 
-+ (instancetype)viewFromXIB{
++ (instancetype)viewFromXib {
     return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].firstObject;
 }
-
 - (BOOL)isShowingOnKeyWindow{
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
     CGRect newFrame = [keyWindow convertRect:self.frame fromView:self.superview];

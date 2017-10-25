@@ -13,6 +13,7 @@
 #import <MJExtension/MJExtension.h>
 #import <SVProgressHUD.h>
 #import "SYDTopicCell.h"
+#import <UIImageView+WebCache.h>
 
 
 @interface SYDAllViewController ()
@@ -29,7 +30,7 @@
 /*统计数据量*/
 @property (nonatomic, assign) NSInteger dataCount;
 /*保存服务器返回的数据*/
-@property (nonatomic, strong) NSMutableArray *topicArr;
+@property (nonatomic, strong) NSMutableArray<SYDTopicModel *> *topicArr;
 /*上拉刷新终止时间*/
 @property (nonatomic, copy) NSString *maxtime;
 /*AFN请求管理者对象*/
@@ -41,7 +42,6 @@
 
 @implementation SYDAllViewController
 
-
 static NSString *const SYDTopicCellId = @"SYDTopicCellId";
 
 - (void)viewDidLoad {
@@ -52,6 +52,10 @@ static NSString *const SYDTopicCellId = @"SYDTopicCellId";
     // 设置tableView的内边距，来达到cell全屏穿透效果
     self.tableView.contentInset = UIEdgeInsetsMake(104, 0, 49, 0);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    self.tableView.estimatedRowHeight = 0;
+    self.tableView.estimatedSectionHeaderHeight = 0;
+    self.tableView.estimatedSectionFooterHeight = 0;
     
     // 设置滚动条的内边距，保证跟tableView的一致
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
@@ -163,27 +167,9 @@ static NSString *const SYDTopicCellId = @"SYDTopicCellId";
 */
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    SYDTopicModel *topic = self.topicArr[indexPath.row];
+//    SYDTopicModel *topic = self.topicArr[indexPath.row];
     
-    NSString *key = [NSString stringWithFormat:@"%p",topic];
-    CGFloat cellHeight = [self.cellDict[key] doubleValue];
-    if (cellHeight == 0) {
-        // 顶部文本的值
-        cellHeight += 65;
-        
-        // 中间文字的值
-        CGSize texMaxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 20, MAXFLOAT);
-        cellHeight += [topic.text boundingRectWithSize:texMaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15]} context:nil].size.height + 10;
-        
-        // 底部工具条的高度
-        cellHeight += 35 + 10;
-        
-        NSLog(@"%f",cellHeight);
-        // 存储高度
-        self.cellDict[key] = @(cellHeight);
-    }
-    
-    return cellHeight;
+    return self.topicArr[indexPath.row].cellHeight;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -227,15 +213,14 @@ static NSString *const SYDTopicCellId = @"SYDTopicCellId";
     
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @1;
+    parameters[@"type"] = @10;
     // 3.发送请求
     
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
         
+//        [responseObject writeToFile:@"/Users/SYD/Desktop/topic/topic.plist" atomically:YES];
         // 字典数组-->模型数组 -- 自定义模型
         self.topicArr = [SYDTopicModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        NSLog(@"%lu",(unsigned long)self.topicArr.count);
-        
         self.maxtime = responseObject[@"info"][@"maxtime"];
         // 刷新数据
         [self.tableView reloadData];
@@ -245,7 +230,6 @@ static NSString *const SYDTopicCellId = @"SYDTopicCellId";
         if (error.code != NSURLErrorCancelled) { // 并非是取消任务引起的的失败，而是网络或者其他问题
             [SVProgressHUD showErrorWithStatus:@"网络连接失败！"];
         }
-        
         [self headerEndRefresh];
     }];
 }
@@ -303,6 +287,9 @@ static NSString *const SYDTopicCellId = @"SYDTopicCellId";
     [self dealFooter];
     
     [self dealHeader];
+    
+    // 滑动时清空内存缓存
+    [[SDImageCache sharedImageCache] clearMemory];
 
 }
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
@@ -362,7 +349,7 @@ static NSString *const SYDTopicCellId = @"SYDTopicCellId";
 - (void)headerStartRefresh {
     
     // 判断是否正在刷新，如果正在刷新则不执行任何操作
-//    if (_isFooterRefreshing) return; // 方式一，解决上下拉共存的问题
+    //    if (_isFooterRefreshing) return; // 方式一，解决上下拉共存的问题
     
     // 判断是否正在刷新，如果正在刷新则不执行任何操作
     if (_isHeaderRefreshing) return;
@@ -408,7 +395,8 @@ static NSString *const SYDTopicCellId = @"SYDTopicCellId";
     // 如果当前正在刷新，则不需要进行刷新
     if (self.isFooterRefreshing) return;
     // 判断是否正在刷新，如果正在刷新则不执行任何操作
-//    if (_isHeaderRefreshing) return;// 方式一，解决上下拉共存的问题
+    
+    // if (_isHeaderRefreshing) return;// 方式一，解决上下拉共存的问题
     
     self.isFooterRefreshing = YES;
     // 更改footView的内容

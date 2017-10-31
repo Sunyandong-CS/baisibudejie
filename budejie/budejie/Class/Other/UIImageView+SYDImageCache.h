@@ -21,7 +21,7 @@
 - (void)SYD_downLoadOriginImage:(NSString *)originImage
                  thumbbailImage:(NSString *)thumbbailImage
                placeholderImage:(UIImage *)placeholderImage
-                      completed:(SDWebImageDownloaderCompletedBlock)completedBlock;
+                      completed:(SDExternalCompletionBlock)completedBlock;
 
 - (void)serHeader:(UIImage *)headerImage placeholder:(UIImage *)placeholder;
 

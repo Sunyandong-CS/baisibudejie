@@ -33,7 +33,7 @@
     
     UIImage *placeholderImage = [UIImage imageNamed:@"mainCellBackground.png"];
     // 下载图片
-    [self.voiceImage SYD_downLoadOriginImage:topic.image1 thumbbailImage:topic.image0 placeholderImage:placeholderImage completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+    [self.voiceImage SYD_downLoadOriginImage:topic.image1 thumbbailImage:topic.image0 placeholderImage:placeholderImage completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         if (!image) {
             return ;
         }

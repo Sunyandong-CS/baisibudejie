@@ -11,6 +11,7 @@
 
 
 typedef NS_ENUM(NSUInteger, SYDTopicCellType) {
+    SYDTopicTypeAll = 1,
     SYDTopicTypePicture = 10,
     SYDTopicTypeJoke    = 29,
     SYDTopicTypeVoice   = 31,

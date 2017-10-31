@@ -24,11 +24,6 @@
 		1F3CE1521F5C0EA300CB0FA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F3CE1501F5C0EA300CB0FA8 /* LaunchScreen.storyboard */; };
 		1F3CE15D1F5C0EA400CB0FA8 /* budejieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3CE15C1F5C0EA400CB0FA8 /* budejieTests.m */; };
 		1F3CE1681F5C0EA400CB0FA8 /* budejieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3CE1671F5C0EA400CB0FA8 /* budejieUITests.m */; };
-		1F4DF96A1F7A010600D1F469 /* SYDAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4DF9691F7A010600D1F469 /* SYDAllViewController.m */; };
-		1F4DF96D1F7A012A00D1F469 /* SYDSoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4DF96C1F7A012A00D1F469 /* SYDSoundViewController.m */; };
-		1F4DF9701F7A014400D1F469 /* SYDVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4DF96F1F7A014400D1F469 /* SYDVideoViewController.m */; };
-		1F4DF9731F7A016600D1F469 /* SYDPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4DF9721F7A016600D1F469 /* SYDPictureViewController.m */; };
-		1F4DF9761F7A017900D1F469 /* SYDJokeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4DF9751F7A017900D1F469 /* SYDJokeViewController.m */; };
 		1F4DF97A1F7BBD5000D1F469 /* SYDConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4DF9791F7BBD5000D1F469 /* SYDConst.m */; };
 		1F5B34501F6AAE790055CDDB /* SYDFriendTrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F5B344F1F6AAE790055CDDB /* SYDFriendTrendViewController.xib */; };
 		1F66A02B1F5E9A7F00B2082C /* SYDTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F66A02A1F5E9A7F00B2082C /* SYDTabBar.m */; };
@@ -59,6 +54,16 @@
 		1FC98C451F696C6000471D5C /* SYDSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FC98C431F696C6000471D5C /* SYDSubCell.xib */; };
 		1FFE4BED1F61415600B94753 /* SYDAdvertisementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE4BEB1F61415600B94753 /* SYDAdvertisementViewController.m */; };
 		1FFE4BEE1F61415600B94753 /* SYDAdvertisementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FFE4BEC1F61415600B94753 /* SYDAdvertisementViewController.xib */; };
+		CF272FBD1FA184DC00AED723 /* SYDAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF272FB21FA183FA00AED723 /* SYDAllViewController.m */; };
+		CF272FBE1FA184DC00AED723 /* SYDJokeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF272FB41FA183FA00AED723 /* SYDJokeViewController.m */; };
+		CF272FBF1FA184DC00AED723 /* SYDPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF272FB61FA183FA00AED723 /* SYDPictureViewController.m */; };
+		CF272FC01FA184DC00AED723 /* SYDSoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF272FB81FA183FA00AED723 /* SYDSoundViewController.m */; };
+		CF272FC11FA184DC00AED723 /* SYDTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF272FBA1FA183FA00AED723 /* SYDTopicViewController.m */; };
+		CF272FC21FA184DC00AED723 /* SYDVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF272FBC1FA183FA00AED723 /* SYDVideoViewController.m */; };
+		CF272FC71FA2145000AED723 /* SYDPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF272FC61FA2145000AED723 /* SYDPublishView.m */; };
+		CF272FC91FA2146B00AED723 /* SYDPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF272FC81FA2146B00AED723 /* SYDPublishView.xib */; };
+		CF272FCC1FA3633000AED723 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = CF272FCB1FA3633000AED723 /* UIView+Animation.m */; };
+		CF4F2DBD1FA8BBDE00B21143 /* SYDNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4F2DBC1FA8BBDE00B21143 /* SYDNormalHeader.m */; };
 		CFB3AFFC1F94E75F00298E2A /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB3AFFB1F94E75F00298E2A /* UIView+frame.m */; };
 		CFD1A81C1F96ED5B001D6F11 /* SYDTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD1A81B1F96ED5B001D6F11 /* SYDTopicVideoView.m */; };
 		CFD1A81E1F96ED6A001D6F11 /* SYDTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD1A81D1F96ED6A001D6F11 /* SYDTopicVideoView.xib */; };
@@ -124,16 +129,6 @@
 		1F3CE1631F5C0EA400CB0FA8 /* budejieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = budejieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F3CE1671F5C0EA400CB0FA8 /* budejieUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = budejieUITests.m; sourceTree = "<group>"; };
 		1F3CE1691F5C0EA400CB0FA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1F4DF9681F7A010600D1F469 /* SYDAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYDAllViewController.h; sourceTree = "<group>"; };
-		1F4DF9691F7A010600D1F469 /* SYDAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYDAllViewController.m; sourceTree = "<group>"; };
-		1F4DF96B1F7A012A00D1F469 /* SYDSoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYDSoundViewController.h; sourceTree = "<group>"; };
-		1F4DF96C1F7A012A00D1F469 /* SYDSoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYDSoundViewController.m; sourceTree = "<group>"; };
-		1F4DF96E1F7A014400D1F469 /* SYDVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYDVideoViewController.h; sourceTree = "<group>"; };
-		1F4DF96F1F7A014400D1F469 /* SYDVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYDVideoViewController.m; sourceTree = "<group>"; };
-		1F4DF9711F7A016600D1F469 /* SYDPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYDPictureViewController.h; sourceTree = "<group>"; };
-		1F4DF9721F7A016600D1F469 /* SYDPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYDPictureViewController.m; sourceTree = "<group>"; };
-		1F4DF9741F7A017900D1F469 /* SYDJokeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYDJokeViewController.h; sourceTree = "<group>"; };
-		1F4DF9751F7A017900D1F469 /* SYDJokeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYDJokeViewController.m; sourceTree = "<group>"; };
 		1F4DF9781F7BBD5000D1F469 /* SYDConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYDConst.h; sourceTree = "<group>"; };
 		1F4DF9791F7BBD5000D1F469 /* SYDConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYDConst.m; sourceTree = "<group>"; };
 		1F5B344F1F6AAE790055CDDB /* SYDFriendTrendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYDFriendTrendViewController.xib; sourceTree = "<group>"; };
@@ -187,6 +182,23 @@
 		1FFE4BEC1F61415600B94753 /* SYDAdvertisementViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SYDAdvertisementViewController.xib; sourceTree = "<group>"; };
 		3E6A28540AEE5ABBD3AEED56 /* libPods-budejie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-budejie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A38268A64DF1882ED4C45197 /* Pods-budejie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-budejie.release.xcconfig"; path = "Pods/Target Support Files/Pods-budejie/Pods-budejie.release.xcconfig"; sourceTree = "<group>"; };
+		CF272FB11FA183FA00AED723 /* SYDAllViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYDAllViewController.h; sourceTree = "<group>"; };
+		CF272FB21FA183FA00AED723 /* SYDAllViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYDAllViewController.m; sourceTree = "<group>"; };
+		CF272FB31FA183FA00AED723 /* SYDJokeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYDJokeViewController.h; sourceTree = "<group>"; };
+		CF272FB41FA183FA00AED723 /* SYDJokeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYDJokeViewController.m; sourceTree = "<group>"; };
+		CF272FB51FA183FA00AED723 /* SYDPictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYDPictureViewController.h; sourceTree = "<group>"; };
+		CF272FB61FA183FA00AED723 /* SYDPictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYDPictureViewController.m; sourceTree = "<group>"; };
+		CF272FB71FA183FA00AED723 /* SYDSoundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYDSoundViewController.h; sourceTree = "<group>"; };
+		CF272FB81FA183FA00AED723 /* SYDSoundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYDSoundViewController.m; sourceTree = "<group>"; };
+		CF272FB91FA183FA00AED723 /* SYDTopicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYDTopicViewController.h; sourceTree = "<group>"; };
+		CF272FBA1FA183FA00AED723 /* SYDTopicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYDTopicViewController.m; sourceTree = "<group>"; };
+		CF272FBB1FA183FA00AED723 /* SYDVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYDVideoViewController.h; sourceTree = "<group>"; };
+		CF272FBC1FA183FA00AED723 /* SYDVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYDVideoViewController.m; sourceTree = "<group>"; };
+		CF272FC51FA2145000AED723 /* SYDPublishView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SYDPublishView.h; path = budejie/Class/Publish/Controller/SYDPublishView.h; sourceTree = SOURCE_ROOT; };
+		CF272FC61FA2145000AED723 /* SYDPublishView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SYDPublishView.m; path = budejie/Class/Publish/Controller/SYDPublishView.m; sourceTree = SOURCE_ROOT; };
+		CF272FC81FA2146B00AED723 /* SYDPublishView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SYDPublishView.xib; path = budejie/Class/Publish/Controller/SYDPublishView.xib; sourceTree = SOURCE_ROOT; };
+		CF272FCA1FA3633000AED723 /* UIView+Animation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
+		CF272FCB1FA3633000AED723 /* UIView+Animation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
 		CF3E13651F94E91A00D2E983 /* LaunchImage-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-568h@2x.png"; sourceTree = "<group>"; };
 		CF3E13661F94E91A00D2E983 /* LaunchImage-700-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700-568h@2x.png"; sourceTree = "<group>"; };
 		CF3E13671F94E91A00D2E983 /* LaunchImage-700@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700@2x.png"; sourceTree = "<group>"; };
@@ -194,6 +206,8 @@
 		CF3E13691F94E91A00D2E983 /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
 		CF3E136A1F94E91A00D2E983 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		CF3E136B1F94E91A00D2E983 /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
+		CF4F2DBB1FA8BBDE00B21143 /* SYDNormalHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYDNormalHeader.h; sourceTree = "<group>"; };
+		CF4F2DBC1FA8BBDE00B21143 /* SYDNormalHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYDNormalHeader.m; sourceTree = "<group>"; };
 		CFB3AFFA1F94E75100298E2A /* UIView+frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
 		CFB3AFFB1F94E75F00298E2A /* UIView+frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
 		CFD1A81A1F96ED5B001D6F11 /* SYDTopicVideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYDTopicVideoView.h; sourceTree = "<group>"; };
@@ -242,7 +256,6 @@
 			isa = PBXGroup;
 			children = (
 				1F12F1F61F74CEC60096DAB4 /* Tool */,
-				1FFE4BE61F61411600B94753 /* Advertisement */,
 				1F66A0351F5FC98300B2082C /* Setting */,
 				1F02DCB71F5D40D200A3EC74 /* Main */,
 				1F02DC8E1F5D3F1D00A3EC74 /* Essence */,
@@ -268,18 +281,9 @@
 		1F02DC8F1F5D3F1D00A3EC74 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CF272FB01FA183FA00AED723 /* topic */,
 				1F02DCA81F5D402100A3EC74 /* SYDEssenceViewController.h */,
 				1F02DCA91F5D402100A3EC74 /* SYDEssenceViewController.m */,
-				1F4DF9741F7A017900D1F469 /* SYDJokeViewController.h */,
-				1F4DF9751F7A017900D1F469 /* SYDJokeViewController.m */,
-				1F4DF9681F7A010600D1F469 /* SYDAllViewController.h */,
-				1F4DF9691F7A010600D1F469 /* SYDAllViewController.m */,
-				1F4DF96B1F7A012A00D1F469 /* SYDSoundViewController.h */,
-				1F4DF96C1F7A012A00D1F469 /* SYDSoundViewController.m */,
-				1F4DF96E1F7A014400D1F469 /* SYDVideoViewController.h */,
-				1F4DF96F1F7A014400D1F469 /* SYDVideoViewController.m */,
-				1F4DF9711F7A016600D1F469 /* SYDPictureViewController.h */,
-				1F4DF9721F7A016600D1F469 /* SYDPictureViewController.m */,
 				CFD1A8311F9B37E7001D6F11 /* SYDShowBigPictureViewController.h */,
 				CFD1A8321F9B37E7001D6F11 /* SYDShowBigPictureViewController.m */,
 				CFD1A8331F9B37E7001D6F11 /* SYDShowBigPictureViewController.xib */,
@@ -487,6 +491,9 @@
 		1F02DCA51F5D3F1D00A3EC74 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CF272FC51FA2145000AED723 /* SYDPublishView.h */,
+				CF272FC61FA2145000AED723 /* SYDPublishView.m */,
+				CF272FC81FA2146B00AED723 /* SYDPublishView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -524,6 +531,8 @@
 			children = (
 				1F66A0291F5E9A7F00B2082C /* SYDTabBar.h */,
 				1F66A02A1F5E9A7F00B2082C /* SYDTabBar.m */,
+				CF4F2DBB1FA8BBDE00B21143 /* SYDNormalHeader.h */,
+				CF4F2DBC1FA8BBDE00B21143 /* SYDNormalHeader.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -541,6 +550,8 @@
 				1FBC10461F70AE370010FD5D /* UITextField+placeholderColor.m */,
 				CFD1A8291F98D771001D6F11 /* UIImageView+SYDImageCache.h */,
 				CFD1A82A1F98D771001D6F11 /* UIImageView+SYDImageCache.m */,
+				CF272FCA1FA3633000AED723 /* UIView+Animation.h */,
+				CF272FCB1FA3633000AED723 /* UIView+Animation.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -548,6 +559,7 @@
 		1F12F1F61F74CEC60096DAB4 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				1FFE4BE61F61411600B94753 /* Advertisement */,
 				1F12F1FA1F74CF240096DAB4 /* FileCacheTool.h */,
 				1F12F1FB1F74CF240096DAB4 /* FileCacheTool.m */,
 			);
@@ -701,6 +713,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CF272FB01FA183FA00AED723 /* topic */ = {
+			isa = PBXGroup;
+			children = (
+				CF272FB11FA183FA00AED723 /* SYDAllViewController.h */,
+				CF272FB21FA183FA00AED723 /* SYDAllViewController.m */,
+				CF272FB31FA183FA00AED723 /* SYDJokeViewController.h */,
+				CF272FB41FA183FA00AED723 /* SYDJokeViewController.m */,
+				CF272FB51FA183FA00AED723 /* SYDPictureViewController.h */,
+				CF272FB61FA183FA00AED723 /* SYDPictureViewController.m */,
+				CF272FB71FA183FA00AED723 /* SYDSoundViewController.h */,
+				CF272FB81FA183FA00AED723 /* SYDSoundViewController.m */,
+				CF272FB91FA183FA00AED723 /* SYDTopicViewController.h */,
+				CF272FBA1FA183FA00AED723 /* SYDTopicViewController.m */,
+				CF272FBB1FA183FA00AED723 /* SYDVideoViewController.h */,
+				CF272FBC1FA183FA00AED723 /* SYDVideoViewController.m */,
+			);
+			path = topic;
+			sourceTree = "<group>";
+		};
 		CF3E13641F94E91A00D2E983 /* 启动图片 */ = {
 			isa = PBXGroup;
 			children = (
@@ -848,6 +879,7 @@
 				CFD1A8231F97286D001D6F11 /* SYDTopicVoiceView.xib in Resources */,
 				1F5B34501F6AAE790055CDDB /* SYDFriendTrendViewController.xib in Resources */,
 				CFD1A81E1F96ED6A001D6F11 /* SYDTopicVideoView.xib in Resources */,
+				CF272FC91FA2146B00AED723 /* SYDPublishView.xib in Resources */,
 				1F3CE14D1F5C0EA300CB0FA8 /* Main.storyboard in Resources */,
 				CFD1A8281F973120001D6F11 /* SYDTopicPictureView.xib in Resources */,
 				CFD1A8351F9B37E7001D6F11 /* SYDShowBigPictureViewController.xib in Resources */,
@@ -912,6 +944,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-budejie/Pods-budejie-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -930,21 +963,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF272FBD1FA184DC00AED723 /* SYDAllViewController.m in Sources */,
+				CF272FBE1FA184DC00AED723 /* SYDJokeViewController.m in Sources */,
+				CF272FBF1FA184DC00AED723 /* SYDPictureViewController.m in Sources */,
+				CF272FC01FA184DC00AED723 /* SYDSoundViewController.m in Sources */,
+				CF272FC11FA184DC00AED723 /* SYDTopicViewController.m in Sources */,
+				CF272FC21FA184DC00AED723 /* SYDVideoViewController.m in Sources */,
 				1F66A0341F5FC21300B2082C /* SYDNavigationController.m in Sources */,
 				1F02DCAD1F5D404500A3EC74 /* SYDFriendTrendViewController.m in Sources */,
+				CF4F2DBD1FA8BBDE00B21143 /* SYDNormalHeader.m in Sources */,
 				1FBC10411F6FF6EF0010FD5D /* SYDTextField.m in Sources */,
 				1FFE4BED1F61415600B94753 /* SYDAdvertisementViewController.m in Sources */,
 				1FC98C401F695EE800471D5C /* SYDSubItem.m in Sources */,
 				1FBC102C1F6CE72C0010FD5D /* SYDLoginViewController.m in Sources */,
-				1F4DF9731F7A016600D1F469 /* SYDPictureViewController.m in Sources */,
 				CFD1A8261F973111001D6F11 /* SYDTopicPictureView.m in Sources */,
 				1F12F1FC1F74CF240096DAB4 /* FileCacheTool.m in Sources */,
 				1F02DCB31F5D408B00A3EC74 /* SYDNewViewController.m in Sources */,
 				1FBC10511F7115250010FD5D /* SYDSquareItemModel.m in Sources */,
 				CFB3AFFC1F94E75F00298E2A /* UIView+frame.m in Sources */,
-				1F4DF96A1F7A010600D1F469 /* SYDAllViewController.m in Sources */,
+				CF272FCC1FA3633000AED723 /* UIView+Animation.m in Sources */,
 				1FBC104D1F7105580010FD5D /* SYDSquareCell.m in Sources */,
-				1F4DF96D1F7A012A00D1F469 /* SYDSoundViewController.m in Sources */,
 				1F02DCB01F5D406900A3EC74 /* SYDMeViewController.m in Sources */,
 				1FBC103E1F6FC1E50010FD5D /* SYDButton.m in Sources */,
 				1F9D41131F690A00008FADF1 /* SYDAdModel.m in Sources */,
@@ -958,16 +996,15 @@
 				1FBC10471F70AE370010FD5D /* UITextField+placeholderColor.m in Sources */,
 				1FA5BFD01F8CA26800C6AD10 /* SYDTopicModel.m in Sources */,
 				1FC98C3D1F695A6200471D5C /* SYDSubscribeViewController.m in Sources */,
-				1F4DF9761F7A017900D1F469 /* SYDJokeViewController.m in Sources */,
 				1F02DCC41F5D4F1400A3EC74 /* UIImage+SYDImage.m in Sources */,
 				1F66A02E1F5EDBFC00B2082C /* UIBarButtonItem+item.m in Sources */,
 				1F02DCA71F5D3F1D00A3EC74 /* main.m in Sources */,
 				CFD1A8211F97285F001D6F11 /* SYDTopicVoiceView.m in Sources */,
 				1F02DCA61F5D3F1D00A3EC74 /* AppDelegate.m in Sources */,
+				CF272FC71FA2145000AED723 /* SYDPublishView.m in Sources */,
 				1FBC10391F6FAF3A0010FD5D /* SYDQuickLoginView.m in Sources */,
 				CFD1A81C1F96ED5B001D6F11 /* SYDTopicVideoView.m in Sources */,
 				1F02DCAA1F5D402100A3EC74 /* SYDEssenceViewController.m in Sources */,
-				1F4DF9701F7A014400D1F469 /* SYDVideoViewController.m in Sources */,
 				1FA5BFD31F8E49D300C6AD10 /* SYDTopicCell.m in Sources */,
 				1FC652641F78F483000CE48D /* SYDTitleButton.m in Sources */,
 				CFD1A8341F9B37E7001D6F11 /* SYDShowBigPictureViewController.m in Sources */,

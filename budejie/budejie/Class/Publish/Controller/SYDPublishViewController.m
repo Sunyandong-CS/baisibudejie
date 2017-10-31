@@ -13,9 +13,15 @@
 @end
 
 @implementation SYDPublishViewController
+- (IBAction)cancel:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor blueColor];
     // Do any additional setup after loading the view.
 }
 

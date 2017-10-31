@@ -7,7 +7,8 @@
 //
 
 #import "SYDTabBar.h"
-#import "SYDPublishViewController.h"
+#import "SYDPublishView.h"
+#import "UIView+Animation.h"
 
 
 #define TabBarButtonDidRepeatClickNotification @"TabBarButtonDidRepeatClickNotification"
@@ -40,11 +41,25 @@
 
 // 打开发布页面
 - (void)publish {
+    SYDPublishView *publishV = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([SYDPublishView class]) owner:self options:nil].firstObject;
+    
+    [[UIApplication sharedApplication].keyWindow addSubview:publishV];
+    // 设置publishV的frame
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        publishV.frame = [UIApplication sharedApplication].keyWindow.bounds;
+
+    } completion:^(BOOL finished) {
+        
+    }];
+   
     
     // 判断是否响应代理方法
-    if ([self.delegate respondsToSelector:@selector(btnClick:)]) {
-        [self.delegate btnClick:self];
-    }
+    //    if ([self.delegate respondsToSelector:@selector(btnClick:)]) {
+    //        [self.delegate btnClick:self];
+    //    }
+    
+    
 }
 
 - (void)layoutSubviews {

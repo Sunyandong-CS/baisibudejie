@@ -20,7 +20,7 @@
 //    NSLog(@"SYD----load");
     UINavigationBar *navbar = [UINavigationBar appearanceWhenContainedIn:self, nil] ;
     
-//    navbar.barTintColor = [UIColor]
+//    navbar.barTintColor = [U  IColor]
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
     
     textAttrs[NSFontAttributeName] = [UIFont boldSystemFontOfSize:20];

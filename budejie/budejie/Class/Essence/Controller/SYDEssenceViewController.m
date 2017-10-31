@@ -70,13 +70,16 @@
 
 }
 
+/**
+ 添加子控制器
+ */
 - (void)addChildVC {
     
     [self addChildViewController:[[SYDAllViewController alloc] init]];
     [self addChildViewController:[[SYDVideoViewController alloc] init]];
     [self addChildViewController:[[SYDSoundViewController alloc] init]];
-    [self addChildViewController:[[SYDJokeViewController alloc] init]];
     [self addChildViewController:[[SYDPictureViewController alloc] init]];
+    [self addChildViewController:[[SYDJokeViewController alloc] init]];
     
 }
 

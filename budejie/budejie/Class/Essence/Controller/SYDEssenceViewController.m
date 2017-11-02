@@ -15,7 +15,7 @@
 #import "SYDSoundViewController.h"
 #import "SYDVideoViewController.h"
 #import "SYDJokeViewController.h"
-
+#import "SYDConst.h"
 
 
 @interface SYDEssenceViewController ()<UIScrollViewDelegate>
@@ -51,7 +51,10 @@
     // 4.默认加载"全部“页面的View
     [self loadOneChildViewWithIndex:0];
 
-    #warning todo  tabbar和titleBtn的双击刷新
+    #warning todo  tabbar上滑隐藏
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideNav) name:NavigationBarHiddenNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showNav) name:NavigationBarShowNotification object:nil];
+    
     
     #warning todo 上拉和下拉刷新
     
@@ -249,6 +252,8 @@
         scrollView.scrollsToTop = (i == button.tag);
     }
     
+    [self showNav];
+    
     NSLog(@"第 %li 个按钮 ",(long)button.tag);
 }
 
@@ -272,6 +277,30 @@
     NSLog(@"%s",__func__);
 }
 
+// 隐藏导航栏
+- (void) hideNav{
+    self.navigationController.navigationBar.hidden = YES;
+    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 20)];
+    view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:view];
+    self.topView.frame = CGRectMake(0, 20, self.view.width, 40);
+
+}
+
+// 显示导航栏
+- (void) showNav{
+    self.navigationController.navigationBar.hidden = NO;
+    self.topView.frame = CGRectMake(0, 64, self.view.width, 40);
+    
+}
+
+
+- (void) dealloc{
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NavigationBarHiddenNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NavigationBarShowNotification object:nil];
+}
 
 #pragma mark UIScrollViewDelegate 
 

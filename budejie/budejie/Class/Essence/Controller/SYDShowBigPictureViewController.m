@@ -10,6 +10,7 @@
 #import <UIImageView+WebCache.h>
 #import "UIView+frame.h"
 #import "SYDTopicModel.h"
+#import <FLAnimatedImage/FLAnimatedImage.h>
 #import <SVProgressHUD.h>
 
 @interface SYDShowBigPictureViewController ()<UIScrollViewDelegate>
@@ -17,7 +18,7 @@
 /* 设置scrollView */
 @property (nonatomic, weak) UIScrollView *scrollView;
 /* 设置imageView */
-@property (nonatomic, weak) UIImageView *imageView;
+@property (nonatomic, weak) FLAnimatedImageView *imageView;
 @end
 
 @implementation SYDShowBigPictureViewController
@@ -157,7 +158,7 @@
     self.scrollView = scrollView;
     
     // imageView
-    UIImageView *imageView = [[UIImageView alloc] init];
+    FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc] init];
     [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.image1] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         if (!image) return;
         self.saveButton.enabled = YES;
@@ -180,6 +181,16 @@
         scrollView.maximumZoomScale = maxScale;
         scrollView.delegate = self;
     }
+    
+    if ([self.topic.image1.pathExtension.lowercaseString isEqualToString:@"gif"]) {
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            FLAnimatedImage *flImage = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.topic.image1]]];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.imageView.animatedImage = flImage;
+            });
+        });
+    }
+    
 }
 
 

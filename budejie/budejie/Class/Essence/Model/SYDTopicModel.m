@@ -27,7 +27,7 @@
             CGFloat imageH = self.height * imageW / self.width;
             // 如果图片高度超过300，则设置成300
             
-            if (imageH > 300 && !self.is_gif) {
+            if (imageH > [UIScreen mainScreen].bounds.size.height && !_is_gif) {
                 imageH = 300;
                 self.isBigImage = YES;
             }

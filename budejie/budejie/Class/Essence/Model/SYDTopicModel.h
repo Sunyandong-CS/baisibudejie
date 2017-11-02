@@ -63,6 +63,8 @@ typedef NS_ENUM(NSUInteger, SYDTopicCellType) {
 /* 高清图地址 */
 @property (nonatomic, copy) NSString *image2;
 
+
+@property (nonatomic, copy) NSString * images_gif;
 /* 判断是否是gif */
 @property (nonatomic, assign) BOOL is_gif;
 /* 判断是否是大图 */

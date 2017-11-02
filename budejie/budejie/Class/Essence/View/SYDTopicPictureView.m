@@ -8,16 +8,22 @@
 
 #import "SYDTopicPictureView.h"
 #import "SYDTopicModel.h"
+#import "UIView+frame.h"
+#import <FLAnimatedImage/FLAnimatedImage.h>
 #import "UIImageView+SYDImageCache.h"
 #import "SYDShowBigPictureViewController.h"
 
 @interface SYDTopicPictureView ()
-@property (weak, nonatomic) IBOutlet UIImageView *pictureView;
+@property (weak, nonatomic) IBOutlet FLAnimatedImageView *pictureView;
 @property (weak, nonatomic) IBOutlet UIImageView *gifView;
 @property (weak, nonatomic) IBOutlet UIButton *showBigImageBtn;
 
 @end
 @implementation SYDTopicPictureView
+{
+    NSString * _url;
+}
+
 - (IBAction)tapToShowBigPicture:(UITapGestureRecognizer *)sender {
     // 创建查看大图页面控制器
     SYDShowBigPictureViewController *showBigPicVC = [[SYDShowBigPictureViewController alloc] init];
@@ -36,21 +42,26 @@
 
 - (void)setTopic:(SYDTopicModel *)topic {
     _topic = topic;
-    
-    // 下载并显示图片
+    _url = @"";
+    self.pictureView.animatedImage = nil;
+    self.pictureView.image = nil;
     
     UIImage *placeholderImage = [UIImage imageNamed:@"mainCellBackground.png"];
+    // 下载并显示图片
+
     [self.pictureView SYD_downLoadOriginImage:topic.image1 thumbbailImage:topic.image0 placeholderImage:placeholderImage completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         if (!image) {
-            return ;
+                return ;
         }
+        
+        if ([topic.image1.pathExtension.lowercaseString isEqualToString:@"gif"]) {
+            _url = topic.image1;
+            [self tg_gifForUrl:_url];
+        }
+        
     }];
-    
-//    if (!topic.is_gif) {
-//        self.gifView.hidden = YES;
-//    }
+
     self.gifView.hidden = !topic.is_gif;
-    
     if(topic.isBigImage ) {
         self.showBigImageBtn.hidden = NO;
         self.pictureView.contentMode = UIViewContentModeTop;
@@ -62,7 +73,7 @@
             CGFloat imageH = topic.height * imageW / topic.width;
             
             // 开启图形上下文绘制图片
-            UIGraphicsBeginImageContextWithOptions(CGSizeMake(imageW, imageH), NO, 0);
+            UIGraphicsBeginImageContextWithOptions(CGSizeMake(imageW, imageH), 0,[UIScreen mainScreen].scale);
             [self.pictureView.image drawInRect:CGRectMake(0, 0, imageW, imageH)];
             
             // 取出图形上下文图片
@@ -73,12 +84,46 @@
             
         }
         
-    }else {
+    }else  {
         self.showBigImageBtn.hidden = YES;
         self.pictureView.contentMode = UIViewContentModeScaleToFill;
         self.pictureView.clipsToBounds = NO;
     }
     
+    
+}
+
+
+- (void)tg_gifForUrl:(NSString*)url{
+    id obj = [[self getCache] objectForKey:url];
+    if (obj != nil ) {
+        self.pictureView.animatedImage= (FLAnimatedImage*)obj;
+        //TGLog(@"缓存中的 -- %@",url);
+        return;
+    }
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        FLAnimatedImage *flImage = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url]]];
+        [[self getCache] setObject:flImage forKey:url];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //TGLog(@"下载的 -- %@",url);
+            if (_url == url){
+                self.pictureView.animatedImage= flImage;
+            }else{
+                //TGLog(@"# 错位了 不用设置gif（重用机制造成的，原理请参考SDWebImage）#");
+            }
+        });
+    });
+}
+
+- (NSCache*)getCache{
+    static NSCache * cache = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        cache = [[NSCache alloc]init];
+        cache.countLimit = 30;//关键
+        //TGLog(@"-- 自己的缓存策略 --");
+    });
+    return cache;
 }
 
 @end

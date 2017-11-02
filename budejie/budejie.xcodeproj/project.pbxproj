@@ -64,6 +64,8 @@
 		CF272FC91FA2146B00AED723 /* SYDPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF272FC81FA2146B00AED723 /* SYDPublishView.xib */; };
 		CF272FCC1FA3633000AED723 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = CF272FCB1FA3633000AED723 /* UIView+Animation.m */; };
 		CF4F2DBD1FA8BBDE00B21143 /* SYDNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4F2DBC1FA8BBDE00B21143 /* SYDNormalHeader.m */; };
+		CF4F2DC11FA99D1100B21143 /* SYDCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4F2DBF1FA99D1100B21143 /* SYDCommentViewController.m */; };
+		CF4F2DC21FA99D1100B21143 /* SYDCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF4F2DC01FA99D1100B21143 /* SYDCommentViewController.xib */; };
 		CFB3AFFC1F94E75F00298E2A /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB3AFFB1F94E75F00298E2A /* UIView+frame.m */; };
 		CFD1A81C1F96ED5B001D6F11 /* SYDTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD1A81B1F96ED5B001D6F11 /* SYDTopicVideoView.m */; };
 		CFD1A81E1F96ED6A001D6F11 /* SYDTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD1A81D1F96ED6A001D6F11 /* SYDTopicVideoView.xib */; };
@@ -208,6 +210,9 @@
 		CF3E136B1F94E91A00D2E983 /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
 		CF4F2DBB1FA8BBDE00B21143 /* SYDNormalHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYDNormalHeader.h; sourceTree = "<group>"; };
 		CF4F2DBC1FA8BBDE00B21143 /* SYDNormalHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYDNormalHeader.m; sourceTree = "<group>"; };
+		CF4F2DBE1FA99D1100B21143 /* SYDCommentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYDCommentViewController.h; sourceTree = "<group>"; };
+		CF4F2DBF1FA99D1100B21143 /* SYDCommentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYDCommentViewController.m; sourceTree = "<group>"; };
+		CF4F2DC01FA99D1100B21143 /* SYDCommentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SYDCommentViewController.xib; sourceTree = "<group>"; };
 		CFB3AFFA1F94E75100298E2A /* UIView+frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
 		CFB3AFFB1F94E75F00298E2A /* UIView+frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
 		CFD1A81A1F96ED5B001D6F11 /* SYDTopicVideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYDTopicVideoView.h; sourceTree = "<group>"; };
@@ -287,6 +292,9 @@
 				CFD1A8311F9B37E7001D6F11 /* SYDShowBigPictureViewController.h */,
 				CFD1A8321F9B37E7001D6F11 /* SYDShowBigPictureViewController.m */,
 				CFD1A8331F9B37E7001D6F11 /* SYDShowBigPictureViewController.xib */,
+				CF4F2DBE1FA99D1100B21143 /* SYDCommentViewController.h */,
+				CF4F2DBF1FA99D1100B21143 /* SYDCommentViewController.m */,
+				CF4F2DC01FA99D1100B21143 /* SYDCommentViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -878,6 +886,7 @@
 				1F3CE14F1F5C0EA300CB0FA8 /* Assets.xcassets in Resources */,
 				CFD1A8231F97286D001D6F11 /* SYDTopicVoiceView.xib in Resources */,
 				1F5B34501F6AAE790055CDDB /* SYDFriendTrendViewController.xib in Resources */,
+				CF4F2DC21FA99D1100B21143 /* SYDCommentViewController.xib in Resources */,
 				CFD1A81E1F96ED6A001D6F11 /* SYDTopicVideoView.xib in Resources */,
 				CF272FC91FA2146B00AED723 /* SYDPublishView.xib in Resources */,
 				1F3CE14D1F5C0EA300CB0FA8 /* Main.storyboard in Resources */,
@@ -1002,6 +1011,7 @@
 				CFD1A8211F97285F001D6F11 /* SYDTopicVoiceView.m in Sources */,
 				1F02DCA61F5D3F1D00A3EC74 /* AppDelegate.m in Sources */,
 				CF272FC71FA2145000AED723 /* SYDPublishView.m in Sources */,
+				CF4F2DC11FA99D1100B21143 /* SYDCommentViewController.m in Sources */,
 				1FBC10391F6FAF3A0010FD5D /* SYDQuickLoginView.m in Sources */,
 				CFD1A81C1F96ED5B001D6F11 /* SYDTopicVideoView.m in Sources */,
 				1F02DCAA1F5D402100A3EC74 /* SYDEssenceViewController.m in Sources */,

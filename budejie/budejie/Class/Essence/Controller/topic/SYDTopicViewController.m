@@ -18,12 +18,15 @@
 #import "UIView+frame.h"
 #import <AFNetworking.h>
 #import "SYDTopicModel.h"
+#import <FLAnimatedImage.h>
 #import <MJExtension/MJExtension.h>
 #import <SVProgressHUD.h>
 #import "SYDTopicCell.h"
 #import <UIImageView+WebCache.h>
 #import <MJRefresh.h>
+#import "SYDConst.h"
 #import "SYDNormalHeader.h"
+#import "SYDCommentViewController.h"
 
 
 @interface SYDTopicViewController ()
@@ -41,6 +44,11 @@
 @end
 
 @implementation SYDTopicViewController
+{
+    CGFloat _contentOffsetY;//上次的offset
+    CGFloat _contentOffsetSpeed;//与上次的滚差，用于判断速度
+    NSString * _np;
+}
 
 static NSString *const SYDTopicCellId = @"SYDTopicCellId";
 
@@ -77,6 +85,7 @@ static NSString *const SYDTopicCellId = @"SYDTopicCellId";
     
 }
 
+
 // 移除通知
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -104,7 +113,7 @@ static NSString *const SYDTopicCellId = @"SYDTopicCellId";
 
 
 - (void)setUpFooter {
-    self.tableView.mj_footer = [MJRefreshFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
     
 }
 
@@ -165,8 +174,16 @@ static NSString *const SYDTopicCellId = @"SYDTopicCellId";
     SYDTopicModel *topic = self.topicArr[indexPath.row];
     
     SYDTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:SYDTopicCellId];
-    
     cell.topic = topic;
+    
+    __weak typeof(self)weakSelf = self;
+    __weak typeof(cell)weakCell = cell;
+    [cell setCommentBlock:^() {
+        SYDCommentViewController *cmtVC = [[SYDCommentViewController alloc] init];
+        weakCell.topic = weakSelf.topicArr[indexPath.row];
+        cmtVC.topic = weakCell.topic;
+        [weakSelf .navigationController pushViewController:cmtVC animated:YES];
+    }];
     
     return cell;
 }
@@ -235,20 +252,20 @@ static NSString *const SYDTopicCellId = @"SYDTopicCellId";
     // 3.发送请求
     
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
-        
+
         // 字典数组-->模型数组 -- 自定义模型
         NSMutableArray *topicArr = [SYDTopicModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        
+
         [self.topicArr addObjectsFromArray:topicArr];
         NSLog(@"%lu",(unsigned long)self.topicArr.count);
-        
+
         self.maxtime = responseObject[@"info"][@"maxtime"];
         // 刷新数据
         [self.tableView reloadData];
-        
+
         // 结束上拉刷新
         [self.tableView.mj_footer endRefreshing];
-        
+
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (error.code != NSURLErrorCancelled) { // 并非是取消任务引起的的失败，而是网络或者其他问题
             [SVProgressHUD showErrorWithStatus:@"网络连接失败！"];
@@ -262,7 +279,35 @@ static NSString *const SYDTopicCellId = @"SYDTopicCellId";
 #pragma mark 监听scrollView的滑动
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-
+    if (scrollView.contentOffset.y > _contentOffsetY){//上滚
+        //TGLog(@"up %f",scrollView.contentOffset.y);
+        if (scrollView.contentOffset.y > 0){
+            //隐藏，放入nav
+            //通知形式
+            //TGLog(@"我要隐藏了～～～～～～～～～～～～ %f",scrollView.contentOffset.y);
+            if((scrollView.contentOffset.y - _contentOffsetY) > _contentOffsetSpeed && _contentOffsetSpeed>10){//速度超过20隐藏
+                //TGLog(@"~~~~~~~~~~~~~~~~~~~~~%f %f",scrollView.contentOffset.y - _contentOffsetY,_contentOffsetSpeed);//滚速递减则不再发通知
+                [[NSNotificationCenter defaultCenter] postNotificationName:NavigationBarHiddenNotification object:nil userInfo:nil];
+            }
+            _contentOffsetSpeed = scrollView.contentOffset.y - _contentOffsetY;
+        }
+    }else{
+        //显示，回归原位
+        //通知形式
+        //TGLog(@"dwon %f",scrollView.contentOffset.y);
+        if (scrollView.contentOffset.y > 0){
+            //TGLog(@"我要显示了^^^^^^^^^^^^^^^^^^^^ %f",scrollView.contentOffset.y);
+            if (_contentOffsetY - scrollView.contentOffset.y > _contentOffsetSpeed && _contentOffsetSpeed>10){//速度超过20显示
+                //TGLog(@"^^^^^^^^^^^^^^^^^^^^^^^%f %f",_contentOffsetY - scrollView.contentOffset.y,_contentOffsetSpeed);
+                [[NSNotificationCenter defaultCenter] postNotificationName:NavigationBarShowNotification object:nil userInfo:nil];
+            }
+            _contentOffsetSpeed = _contentOffsetY - scrollView.contentOffset.y;
+        }else if (fabs(scrollView.contentOffset.y) > NavMaxY && fabs(scrollView.contentOffset.y) < NavMaxY+TitleVH){
+            NSLog(@"我要显示了^^^^^^^^^^^^^^^^^^^^ %f",scrollView.contentOffset.y);
+            [[NSNotificationCenter defaultCenter] postNotificationName:NavigationBarShowNotification object:nil userInfo:nil];
+        }
+    }
+    _contentOffsetY = scrollView.contentOffset.y;
     // 滑动时清空内存缓存
     [[SDImageCache sharedImageCache] clearMemory];
     

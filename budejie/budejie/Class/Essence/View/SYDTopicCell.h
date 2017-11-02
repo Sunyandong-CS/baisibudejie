@@ -14,4 +14,7 @@
 
 /*Topic模型属性*/
 @property (nonatomic, strong) SYDTopicModel *topic;
+
+/* 跳转到comment的block */
+@property (nonatomic, copy) void (^commentBlock)(void);
 @end

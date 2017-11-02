@@ -6,8 +6,10 @@
 //  Copyright © 2017年 com.xididan. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 
-@interface SYDConst : NSObject
+#import <UIKit/UIKit.h>
 
-@end
+UIKIT_EXTERN NSString  * const NavigationBarHiddenNotification;
+UIKIT_EXTERN NSString  * const NavigationBarShowNotification;
+UIKIT_EXTERN CGFloat const NavMaxY;
+UIKIT_EXTERN CGFloat const TitleVH;

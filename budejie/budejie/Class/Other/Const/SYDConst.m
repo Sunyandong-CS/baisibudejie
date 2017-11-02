@@ -7,7 +7,9 @@
 //
 
 #import "SYDConst.h"
+#import <Foundation/Foundation.h>
 
-@implementation SYDConst
-
-@end
+NSString  * const NavigationBarHiddenNotification = @"NavigationBarHiddenNotification";
+NSString  * const NavigationBarShowNotification = @"NavigationBarShowNotification";
+CGFloat const NavMaxY = 64;
+CGFloat const TitleVH = 40;

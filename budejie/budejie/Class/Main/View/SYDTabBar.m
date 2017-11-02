@@ -8,6 +8,7 @@
 
 #import "SYDTabBar.h"
 #import "SYDPublishView.h"
+#import "SYDConst.h"
 #import "UIView+Animation.h"
 
 
@@ -102,6 +103,7 @@
     if (tabBarBtn == _preClickBtn) {
         // 发出通知,让相应页面接收通知执行刷新请求
         [[NSNotificationCenter defaultCenter] postNotificationName:TabBarButtonDidRepeatClickNotification object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:NavigationBarShowNotification object:nil userInfo:nil];
     }
     _preClickBtn = tabBarBtn;
 }

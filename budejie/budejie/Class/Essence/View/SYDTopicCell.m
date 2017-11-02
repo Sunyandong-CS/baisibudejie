@@ -14,6 +14,7 @@
 #import "SYDTopicVideoView.h"
 #import "SYDTopicVoiceView.h"
 #import "SYDTopicPictureView.h"
+#import "SYDCommentViewController.h"
 
 @interface SYDTopicCell ()
 // 控件命名--> 功能加控件类型
@@ -36,6 +37,12 @@
 @end
 
 @implementation SYDTopicCell
+- (IBAction)showComment:(UIButton *)sender {
+   // 使用block跳转页面
+    if (_commentBlock) {
+        _commentBlock();
+    }
+}
 
 #pragma mark -------
 #pragma mark 懒加载cell的中间部分的View
